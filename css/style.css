@@ -1,0 +1,590 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+:root {
+  --heading: rgb(0 10 45);
+  --para: #777777;
+  --black: rgb(0, 0, 0);
+  --para-tint: #e4e4e4;
+  --service_bg: rgb(144 172 209 / 20%);
+  --third: #fff;
+  --helper: #8490ff;
+  --helper-tint: #f3f4ff;
+  --bg: rgb(249 249 255);
+  --gradient: linear-gradient(0deg, rgb(132 144 255) 0%, rgb(98 189 252) 100%);
+  --gradientSupport: webkit-linear-gradient(
+    0deg,
+    rgb(132 144 255) 0%,
+    rgb(98 189 252) 100%
+  );
+  --shadow: 0px 0px 20px 0px rgb(132 144 255 / 20%);
+  --shadowSupport: 0px 20px 20px 0px rgb(132 144 255 / 30%);
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Work Sans", sans-serif;
+}
+
+/* ==========================
+Reusable code
+========================== */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  color: var(--heading);
+  font-size: 6rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  /* margin-bottom: 1rem; */
+}
+
+p {
+  color: var(--para);
+  line-height: 1.6;
+  font-size: 1.8rem;
+
+  /* word-spacing: 0.1rem; */
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.section {
+  padding: 9rem 0;
+}
+
+.grid {
+  display: grid;
+  gap: 9rem;
+}
+
+.grid-two-column {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-three-col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-four-col {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.btn {
+  background: var(--gradient);
+  padding: 1.6rem 3.2rem;
+  border: none;
+  color: var(--helper-tint);
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  -webkit-transition: all 0.3s ease 0s;
+}
+
+.btn:hover,
+.btn:active {
+  box-shadow: var(--shadowSupport);
+}
+
+/* .dot {
+  height: 15px;
+  width: 15px;
+  background-color: var(--helper);
+  border-radius: 50%;
+  display: inline-block;
+} */
+
+/* .common-line {
+  margin: 8px 15px;
+  width: 240px;
+  border: 2px solid var(--helper);
+} */
+
+.common-heading {
+  font-size: 4.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 6rem;
+  position: relative;
+}
+
+.common-heading::before {
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: var(--helper);
+}
+
+.common-heading::after {
+  content: "";
+  position: absolute;
+  top: 128%;
+  left: 1.5rem;
+  width: 30%;
+  height: 0.3rem;
+  background: var(--helper);
+}
+
+/* .line-design{
+  margin: 15px 0px 0px 0px;
+} */
+
+/* 
+=========================
+Header section starts 
+========================= */
+
+.header {
+  padding: 0 4.8rem;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg);
+  /* background-color: #e7f5ff; */
+}
+
+.header .logo {
+  /* width: 15%; */
+  height: 3rem;
+}
+
+.navbar-lists {
+  display: flex;
+  gap: 4.8rem;
+  list-style: none;
+}
+
+.navbar-link:link,
+.navbar-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #212529;
+  transition: all 0.3s;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar-link:hover,
+.navbar-link:active {
+  color: var(--helper);
+}
+
+/* ===========================================
+Hero  Section Start
+======================================= */
+
+.section-hero {
+  background: var(--bg);
+}
+
+.section-hero-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container {
+  max-width: 140rem;
+  margin: 0 auto;
+}
+
+.hero-top-data {
+  text-transform: uppercase;
+  color: var(--heading);
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--helper);
+}
+
+.hero-heading {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 6.4rem;
+}
+
+.hero-para {
+  margin-top: 1.5rem;
+  margin-bottom: 5rem;
+  max-width: 60rem;
+}
+
+.section-hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img {
+  width: 80%;
+}
+
+/* ====================================
+Hero  Section Ends
+======================================= */
+
+/* ===================================
+Bio-data  Section Start
+======================================= */
+
+.section-Bio-Data {
+  background: var(--bg);
+}
+
+.bio-image img {
+  width: 80%;
+  box-shadow: -2rem -2rem 0rem 0rem var(--helper);
+}
+
+.Bio-data-stats {
+  display: flex;
+  flex-direction: column;
+  padding: 6.4rem 0;
+  gap: 3rem;
+}
+
+.bio-stats h4 {
+  margin-bottom: 1.2rem;
+}
+
+.bio-heading {
+  font-size: 1.8rem;
+}
+
+/* .percent-box{
+  background-color: var(--helper);
+  color: var(--bg);
+  width: 4rem;
+  height: 2.8rem; 
+  margin-left: 5.6rem;
+  text-align: center;
+  padding: 6px;
+  font-size: small;
+} */
+
+.progress-bar {
+  width: 80%;
+  height: 0.8rem;
+  /* background: var(--para); */
+  background-color: var(--para-tint);
+  border-radius: 10rem;
+  position: relative;
+  box-shadow: var(--shadow);
+}
+
+.progress-bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: inherit;
+  background: var(--gradient);
+  border-radius: 10rem;
+}
+
+.progress-bar-2::before {
+  width: 99%;
+}
+
+.progress-bar-3::before {
+  width: 90%;
+}
+
+.progress-bar-4::before {
+  width: 85%;
+}
+
+.progress-bar-5::before {
+  width: 70%;
+}
+
+.progress-bar span {
+  position: absolute;
+  top: 1.8rem;
+  left: 80%;
+  width: 4rem;
+  height: 2rem;
+  background: var(--helper);
+  color: var(--third);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+}
+.progress-bar-2 span {
+  left: 99%;
+}
+
+.progress-bar-3 span {
+  left: 90%;
+}
+
+.progress-bar-4 span {
+  left: 85%;
+}
+
+.progress-bar-5 span {
+  left: 70%;
+}
+
+.progress-bar span::after {
+  content: "";
+  position: absolute;
+  top: -1.6rem;
+  width: 0rem;
+  height: 0rem;
+  border: 0.8rem solid var(--helper);
+  border-color: transparent;
+  border-bottom-color: var(--helper);
+}
+
+/* ===================================
+Bio-data Section Ends
+======================================= */
+
+/* ===================================
+Portfolio Section Starts
+======================================= */
+
+.section-Portfolio {
+  background-color: var(--bg);
+}
+
+.portfolio-images img {
+  width: 100%;
+}
+
+.section-portfolio p {
+  max-width: 60rem;
+}
+
+.p-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  margin: 6.4rem 0rem;
+}
+
+.img-ovelay {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-ovelay .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100%);
+  transition: all 0.3s linear;
+  border-radius: 7px;
+}
+
+.img-ovelay:hover > .overlay{
+  transform: translate(0);
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.img-ovelay .common-heading{
+  text-decoration: none;
+  color: var(--third);
+  margin: 0;
+}
+
+.p-btn:hover{
+  transform: translateY(-1rem);
+}
+
+.p-btn-active{
+  transform: translateY(-1rem);
+}
+
+.p-btn_notActive{
+  display: none;
+}
+
+
+/* ===================================
+Portfolio Section Ends
+======================================= */
+
+
+/* ===================================
+Service Section starts
+======================================= */
+
+.section-services{
+  transition: all 0.7s linear;
+}
+
+.section-work-data {
+  background: var(--gradient);
+  color: var(--third);
+  text-align: center;
+  transition: all 0.7s linear;
+}
+
+.section-services p {
+  max-width: 60rem;
+}
+
+.common-numbers {
+  font-size: 4.8rem;
+}
+
+.section-work-data p {
+  color: var(--third);
+  text-transform: capitalize;
+}
+
+.section-services .grid {
+  margin-top: 10rem;
+  row-gap: 10rem;
+}
+
+.service-box {
+  text-align: center;
+  box-shadow: var(--shadow);
+  border-radius: 5px;
+  padding: 6.4rem 3.4rem;
+  transition: all 0.2s linear;
+}
+
+.service-box:hover {
+  transform: translateY(-2rem);
+}
+.service-box h3{
+  text-transform: capitalize;
+  font-weight: 100;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+}
+
+.service-icon {
+  width: 8rem;
+  height: 8rem;
+  background-color: var(--service_bg);
+  border-radius: 56% 44% 70% 30% / 30% 54% 46% 70%;
+  padding: 1.4rem 1.8rem;
+  color: var(--heading);
+  position: relative;
+  animation: water-wave 3s linear infinite;
+}
+.service-icon::after {
+  content: "";
+  width: 90%;
+  height: 90%;
+  position: absolute;
+  background: transparent;
+  border: 1px solid var(--black);
+  border-radius: 56% 44% 70% 30% / 30% 54% 46% 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: water-wave 3s linear infinite;
+}
+
+
+@keyframes water-wave {
+  0% {
+    border-radius: 56% 44% 70% 30% / 30% 54% 46% 70%;
+  }
+  50% {
+    border-radius: 3% 97% 15% 85% / 72% 0% 100% 28%;
+  }
+  100% {
+    border-radius: 56% 44% 70% 30% / 30% 54% 46% 70%;
+  }
+}
+
+/* ===================================
+Service Section Ends
+======================================= */
+
+/* ===================================
+swiper Section starts
+======================================= */
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+.swiper-client-msg {
+  padding: 5rem 8rem;
+  background-color: var(--third);
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.swiper-slide img{
+  border-radius: 50%;
+  max-width: 10rem;
+  height: 10rem;
+  border: 0.5rem solid var(--helper-tint);
+}
+
+/* ===================================
+swiper Section Ends
+======================================= */
