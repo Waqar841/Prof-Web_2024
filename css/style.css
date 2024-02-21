@@ -558,8 +558,19 @@ swiper Section starts
   font-size: 18px;
   background: #fff;
   display: flex;
+  flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;  
   justify-content: center;
   align-items: center;
+  margin-bottom: 5rem;
 }
 
 /* .swiper-slide img {
@@ -571,19 +582,59 @@ swiper Section starts
 
 .swiper-client-msg {
   padding: 5rem 8rem;
-  background-color: var(--third);
-  border-radius: 10px;
+  background: var(--third);
+  border-radius: 1rem;
   text-align: left;
   box-shadow: var(--shadow);
   position: relative;
 }
+.swiper-client-msg::before{
+  content: "";
+  position: absolute;
+  bottom: -10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5rem solid var(--third);
+  border-color: transparent;
+  border-top-color: var(--helper-tint);
+}
 
-.swiper-slide img{
+.swiper-client-data{
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.swiper-client-data img{
   border-radius: 50%;
   max-width: 10rem;
   height: 10rem;
   border: 0.5rem solid var(--helper-tint);
 }
+
+.swiper-client-msg p::before{
+  content: "\f10d";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  font-size: 5rem;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #ced3ff;
+}
+
+.swiper-client-msg p::after{
+  content: "\f10e";
+  display: inline-block;
+  position: absolute;
+  bottom:0%;
+  right: 5%;
+  font-size: 5rem;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #ced3ff;
+}
+
 
 /* ===================================
 swiper Section Ends
