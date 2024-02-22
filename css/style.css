@@ -156,7 +156,7 @@ li {
 }
 
 /* .line-design{
-  margin: 15px 0px 0px 0px;
+  margin: 15px 0px 0px 0px; 
 } */
 
 /* 
@@ -551,6 +551,7 @@ swiper Section starts
 .swiper {
   width: 100%;
   height: 100%;
+  margin-top: 9rem;
 }
 
 .swiper-slide {
@@ -587,6 +588,7 @@ swiper Section starts
   text-align: left;
   box-shadow: var(--shadow);
   position: relative;
+  word-spacing: 0.1rem;
 }
 .swiper-client-msg::before{
   content: "";
@@ -633,6 +635,32 @@ swiper Section starts
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   color: #ced3ff;
+}
+.freelancing-section{
+  background-image: url("../images/folio/3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  color: white;
+}
+.fre-body{
+  text-align: center;
+}
+/* .fre-wraper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient);
+} */
+
+.fre-heading{
+  font-size: 4.5rem;
+}
+.free-para{
+  color: var(--para-tint);
 }
 
 
