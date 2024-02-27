@@ -10,6 +10,7 @@
 :root {
   --heading: rgb(0 10 45);
   --para: #777777;
+  --footerPara: #adadad;
   --black: rgb(0, 0, 0);
   --overlay: #3e64ff;
   --para-tint: #e4e4e4;
@@ -695,14 +696,104 @@ ContactUs Section Starts
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
-  
 }
+
 .section-contact-main .grid{
-  gap: 3.2rem;
+  gap: 2rem;
 }
 
+.section-contact-main input, textarea{
+  padding: 1.6rem 2rem;
+  font-size: 1.7rem;
+  width: 100%;
+  border: 0.1rem solid var(--para-tint);
+}
 
+.section-contact-main input[type="submit"]{
+  width: 30%;
+  border: none;
+}
 
 /* ===================================
 ContactUs Section Ends
+======================================= */
+
+/* ===================================
+Footer Section Starts
+======================================= */
+
+.section-footer{
+  background-color: var(--heading);
+  transition: all 0.3s linear;
+}
+
+.section-footer h3{
+  color: #e4e4e4;
+  margin-bottom: 4rem;
+}
+
+.f-about{
+  color: #adadad;
+}
+
+.f-links ul,
+.f-services ul,
+.f-address address{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  list-style: none;
+}
+
+.f-links li,
+.f-links a,
+.f-services li,
+.f-services a {
+  font-size: 1.8rem;
+  color: #adadad;
+  text-transform: capitalize;
+}
+
+.f-links span,
+.f-services span,
+.f-address span {
+  margin-right: 1rem;
+}
+
+.f-address p{
+  font-style: normal;
+  color: var(--footerPara);
+}
+
+.f-social-icons {
+  margin: 5rem 0;
+  text-align: center;
+  color: #adadad;
+}
+
+
+.f-social-icons .icons{
+  width: 4rem;
+  height: 4rem;
+  background-color: rgb(144 172 209 / 20%);
+  padding: 1.4rem 1.8rem;
+  display: inline-block;
+  color: var(--heading);
+  animation: water-wave 3s linear infinite;
+  position: relative;
+}
+
+.f-credits p{
+  text-align: center;
+  color: var(--footerPara);
+}
+
+footer a:hover{
+  color: var(--third);
+}
+
+
+/* ===================================
+Footer Section Ends
 ======================================= */
