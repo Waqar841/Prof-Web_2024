@@ -173,6 +173,7 @@ Header section starts
   justify-content: space-between;
   align-items: center;
   background: var(--bg);
+  /* position: fixed; */
   /* background-color: #e7f5ff; */
 }
 
@@ -793,7 +794,21 @@ footer a:hover{
   color: var(--third);
 }
 
-
 /* ===================================
 Footer Section Ends
 ======================================= */
+
+/* scroll to top  */
+
+.scroll_to_top{
+  position: fixed;
+  background-color: var(--heading);
+  right: 2%;
+  bottom: 5%;
+  color: #f3f4ff;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
+}

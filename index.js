@@ -36,4 +36,25 @@ window.onload=function(){
         //     delay:2500,
         // }
     });
+  
+  
+  // -------------------
+  // scroll to top icon
+  // ----------------------
+
+  const scrollElem = document.createElement("div");
+  scrollElem.classList.add("scroll_to_top");
+  scrollElem.innerHTML = `<ion-icon name="arrow-up-outline" class="scroll_to_top"></ion-icon>`;
+  const footerSec = document.querySelector('.section-footer');
+
+  footerSec.after(scrollElem);  
+
+  function scrollToTop() { 
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
+  scrollElem.addEventListener("click",  scrollToTop);
 };
