@@ -16,11 +16,12 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="https://unpkg.com/ionicons@latest/css/ionicons.min.css">
   </head>
   <body>
-    <header class="header">
+    <header class="header active">
       <img src="images/logo.png" alt="thapa technical logo" class="logo" />
-      <nav class="navbar">
+      <nav class="navbar">  
         <ul class="navbar-lists">
           <li><a class="navbar-link home-link" href="#">Home</a></li>
           <li>
@@ -43,6 +44,10 @@
           </li>
         </ul>
       </nav>
+      <div class="mobile-navbar-btns">
+        <ion-icon class="mobile-nav-icon" name="menu-outline"></ion-icon>
+        <ion-icon class="mobile-nav-icon" name="close-outline"></ion-icon>
+      </div>
     </header>
 
     <!-- ======================================== 
@@ -276,22 +281,22 @@
     <section class="section section-work-data" id="work-section">
       <div class="container grid grid-four-col">
         <div>
-          <h2 class="common-numbers">2000+</h2>
+          <h2 class="common-numbers counter-numbers" data-number="2000">0+</h2>
           <p>accomplished projects</p>
         </div>
 
         <div>
-          <h2 class="common-numbers">3000+</h2>
+          <h2 class="common-numbers counter-numbers" data-number="6000">0+</h2>
           <p>accomplished projects</p>
         </div>
 
         <div>
-          <h2 class="common-numbers">4000+</h2>
+          <h2 class="common-numbers counter-numbers" data-number="5000">0+</h2>
           <p>accomplished projects</p>
         </div>
 
         <div>
-          <h2 class="common-numbers">5000+</h2>
+          <h2 class="common-numbers counter-numbers" data-number="8000">0+</h2>
           <p>accomplished projects</p>
         </div>
       </div>
@@ -568,12 +573,14 @@
 
     <section class="section freelancing-section">
       <div class="overlay"></div>
-        <div class="container">
-          <h2>I am <span>available</span> for freelancing</h2>
-          <p class="free-para"> But I must explain to you how all this 
-          mistaken idea of denouncing pleasure and praising pain was born</p>
-          <a class="btn" href="https://www.google.com">Hire me</a>
-        </div>  
+      <div class="container">
+        <h2>I am <span>available</span> for freelancing</h2>
+        <p class="free-para">
+          But I must explain to you how all this mistaken idea of denouncing
+          pleasure and praising pain was born
+        </p>
+        <a class="btn" href="https://www.google.com">Hire me</a>
+      </div>
     </section>
 
     <!-- ======================================== 
@@ -584,44 +591,59 @@
     ContactUs Section Starts
     ======================================= -->
 
-    <section class="section section-contact ">
-        <div class="container">
-          <h2 class="common-heading">contact us</h2>
-        </div>
+    <section class="section section-contact">
+      <div class="container">
+        <h2 class="common-heading">contact us</h2>
+      </div>
 
-        <div class="section-contact-main contact-container">
-          <form action="" method="POST">
+      <div class="section-contact-main contact-container">
+        <form action="" method="POST">
+          <div class="grid grid-two-column">
+            <label for="username">
+              <input
+                type="text"
+                name="username"
+                id="username"
+                required
+                placeholder="Name"
+              />
+            </label>
 
-            <div class=" grid grid-two-column">
-              <label for="username">
-                <input type="text" name="username" id="username" required placeholder="Name">
-              </label>
+            <label for="email">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                placeholder="Email"
+                autocomplete="false"
+              />
+            </label>
+          </div>
 
-              <label for="email">
-                <input type="email" name="email" id="email" required placeholder="Email" autocomplete="false">
-              </label>  
-            </div>
+          <div>
+            <label for="sub">
+              <input
+                type="text"
+                name="subject"
+                id="sub"
+                placeholder="Subject"
+              />
+            </label>
+          </div>
 
-            <div>
-              <label for="sub">
-                <input type="text" name="subject" id="sub" placeholder="Subject">
-              </label>
-            </div>
+          <div>
+            <label for="msg">
+              <textarea name="" id="" cols="30" rows="10"> </textarea>
+            </label>
+          </div>
 
-             <div>
-              <label for="msg">
-                <textarea name="" id="" cols="30" rows="10">
-                </textarea>
-               </label>
-             </div>
-
-             <div>
-               <input type="submit" value="send message" class="btn">
-             </div>
-             
-          </form>
-        </div>
-      </section>
+          <div>
+            <input type="submit" value="send message" class="btn" />
+          </div>
+        </form>
+      </div>
+    </section>
 
     <!-- ===================================
     ContactUs Section Ends
@@ -631,50 +653,93 @@
     Footer Section Ends
     ================================== -->
 
-    <footer class="section section-footer" >
+    <footer class="section section-footer">
       <div class="container grid grid-four-col">
         <div class="f-about">
           <h3>About</h3>
-          <p>We have tested a number of registry fix and clean utilities and present our top 3 list on our site for your convenience. Hope you like it.</p>
+          <p>
+            We have tested a number of registry fix and clean utilities and
+            present our top 3 list on our site for your convenience. Hope you
+            like it.
+          </p>
         </div>
 
         <div class="f-links">
-           <h3>Links</h3>
+          <h3>Links</h3>
           <ul>
-            <li><span><ion-icon name="arrow-forward-outline"></ion-icon></span><a href="#">home</a></li>
-             <li><span><ion-icon name="arrow-forward-outline"></ion-icon></span><a href="#">about</a></li>
-              <li><span><ion-icon name="arrow-forward-outline"></ion-icon></span><a href="#">services</a></li>
-               <li><span><ion-icon name="arrow-forward-outline"></ion-icon></span><a href="#">portfolio</a></li>
-              
-                 <li><span><ion-icon name="arrow-forward-outline"></ion-icon></span><a href="#">contact</a></li>
+            <li>
+              <span><ion-icon name="arrow-forward-outline"></ion-icon></span
+              ><a href="#">home</a>
+            </li>
+            <li>
+              <span><ion-icon name="arrow-forward-outline"></ion-icon></span
+              ><a href="#">about</a>
+            </li>
+            <li>
+              <span><ion-icon name="arrow-forward-outline"></ion-icon></span
+              ><a href="#">services</a>
+            </li>
+            <li>
+              <span><ion-icon name="arrow-forward-outline"></ion-icon></span
+              ><a href="#">portfolio</a>
+            </li>
+
+            <li>
+              <span><ion-icon name="arrow-forward-outline"></ion-icon></span
+              ><a href="#">contact</a>
+            </li>
           </ul>
         </div>
 
-         <div class="f-services">
-            <h3>Services</h3>
+        <div class="f-services">
+          <h3>Services</h3>
           <ul>
-            <li><span><ion-icon name="arrow-forward-outline"></ion-icon></span><a href="#">web design</a></li>
-             <li><span><ion-icon name="arrow-forward-outline"></ion-icon></span><a href="#">web development</a></li>
-              <li><span><ion-icon name="arrow-forward-outline"></ion-icon></span><a href="#">Mern Project</a></li>
-           
-                <li><span><ion-icon name="arrow-forward-outline"></ion-icon></span><a href="#">Online Classes</a></li>
-                 <li><span><ion-icon name="arrow-forward-outline"></ion-icon></span><a href="#">Youtube Course</a></li>
+            <li>
+              <span><ion-icon name="arrow-forward-outline"></ion-icon></span
+              ><a href="#">web design</a>
+            </li>
+            <li>
+              <span><ion-icon name="arrow-forward-outline"></ion-icon></span
+              ><a href="#">web development</a>
+            </li>
+            <li>
+              <span><ion-icon name="arrow-forward-outline"></ion-icon></span
+              ><a href="#">Mern Project</a>
+            </li>
+
+            <li>
+              <span><ion-icon name="arrow-forward-outline"></ion-icon></span
+              ><a href="#">Online Classes</a>
+            </li>
+            <li>
+              <span><ion-icon name="arrow-forward-outline"></ion-icon></span
+              ><a href="#">Youtube Course</a>
+            </li>
           </ul>
         </div>
 
-        <div class="f-address"> 
+        <div class="f-address">
           <h3>Have a Questions?</h3>
           <address>
             <div>
-              <p>  <span><ion-icon name="location-outline"></ion-icon></span> Karachi, Pakistan </p>
+              <p>
+                <span><ion-icon name="location-outline"></ion-icon></span>
+                Karachi, Pakistan
+              </p>
             </div>
 
             <div>
-              <p>  <span><ion-icon name="call-outline"></ion-icon></span> <a href="tel:+923352168684"> +92 3352168684  </a></p>
+              <p>
+                <span><ion-icon name="call-outline"></ion-icon></span>
+                <a href="tel:+923352168684"> +92 3352168684 </a>
+              </p>
             </div>
 
             <div>
-              <p>  <span><ion-icon name="mail-outline"></ion-icon></span> <a href="mailto:waqar8758@gmail.com"> waqar8758@gmail.com </a> </p>
+              <p>
+                <span><ion-icon name="mail-outline"></ion-icon></span>
+                <a href="mailto:waqar8758@gmail.com"> waqar8758@gmail.com </a>
+              </p>
             </div>
           </address>
         </div>
@@ -686,17 +751,20 @@
             <ion-icon class="icons" name="logo-instagram"></ion-icon>
           </a>
 
-            <a href="https://discord.gg/MdScmCsua6" target="_blank">
-           <ion-icon name="logo-linkedin" class="icons"></ion-icon>
+          <a href="https://discord.gg/MdScmCsua6" target="_blank">
+            <ion-icon name="logo-linkedin" class="icons"></ion-icon>
           </a>
 
-            <a href="https://www.youtube.com/thapatechnical" target="_blank">
-           <ion-icon class="icons" name="logo-youtube"></ion-icon>
+          <a href="https://www.youtube.com/thapatechnical" target="_blank">
+            <ion-icon class="icons" name="logo-youtube"></ion-icon>
           </a>
         </div>
 
         <div class="f-credits">
-          <p>Copyright ©2022 All rights reserved | This template is made with ❤ by HF</p>
+          <p>
+            Copyright ©2022 All rights reserved | This template is made with ❤
+            by HF
+          </p>
         </div>
       </div>
     </footer>
