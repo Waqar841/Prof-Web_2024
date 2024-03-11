@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://unpkg.com/ionicons@latest/css/ionicons.min.css">
   </head>
   <body>
-    <header class="header active">
+    <header class="header" id="header">
       <img src="images/logo.png" alt="thapa technical logo" class="logo" />
       <nav class="navbar">  
         <ul class="navbar-lists">
@@ -45,8 +45,8 @@
         </ul>
       </nav>
       <div class="mobile-navbar-btns">
-        <ion-icon class="mobile-nav-icon" name="menu-outline"></ion-icon>
-        <ion-icon class="mobile-nav-icon" name="close-outline"></ion-icon>
+        <ion-icon class="mobile-nav-icon" name="menu-outline" id="menuIcon"></ion-icon>
+        <ion-icon class="mobile-nav-icon hide" name="close-outline" id="closIcon"></ion-icon>
       </div>
     </header>
 

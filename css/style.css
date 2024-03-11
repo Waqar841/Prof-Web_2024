@@ -74,6 +74,10 @@ li {
   list-style: none;
 }
 
+.hide{
+  display: none;
+}
+
 .section {
   padding: 9rem 0;
 }
@@ -828,11 +832,12 @@ Footer Section Ends
   cursor: pointer;
   border: none;
 }
-.mobile-nav-icon[name="close-outline"]{
-  display: none;
-}
 
-/* ===================================
+/* .mobile-nav-icon[name="close-outline"]{
+  display: none;
+} */
+
+/* ==================================
 media queries 
 ===================================== */
 
@@ -867,12 +872,12 @@ media queries
     align-items: center;
     justify-content: center;
 
-    /* transform: translateX(100%);
+    transform: translateX(100%);
     transition:  all 0.5s linear;
 
     opacity: 0;
     visibility: hidden;
-    pointer-events: none; */
+    pointer-events: none;
   }
   .navbar-lists{
     flex-direction: column;

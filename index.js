@@ -89,4 +89,28 @@ window.onload = function () {
   document.querySelectorAll(".counter-numbers").forEach((counterElem) => {
     observer.observe(counterElem);
   });
+
+  // -------------------
+  // mobile navbar
+  // -------------------
+  
+  const menIcon = document.getElementById('menuIcon');
+  const closeIcon = document.getElementById('closIcon');
+  const headerElem = document.getElementById('header');
+
+  console.log(menIcon);
+  console.log(headerElem);
+
+  menIcon.addEventListener('click', function () {
+    headerElem.classList.add('active');
+    menIcon.classList.add('hide');
+    closeIcon.classList.remove('hide');
+  });
+
+  closeIcon.addEventListener('click', function () {
+    headerElem.classList.remove('active');
+    menIcon.classList.remove('hide');
+    closeIcon.classList.add('hide');
+  });
+
 };
