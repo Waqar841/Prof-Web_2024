@@ -98,9 +98,6 @@ window.onload = function () {
   const closeIcon = document.getElementById('closIcon');
   const headerElem = document.getElementById('header');
 
-  console.log(menIcon);
-  console.log(headerElem);
-
   menIcon.addEventListener('click', function () {
     headerElem.classList.add('active');
     menIcon.classList.add('hide');
